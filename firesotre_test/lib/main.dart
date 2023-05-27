@@ -1,8 +1,10 @@
 import 'package:firesotre_test/widgets/button.dart';
 import 'package:firesotre_test/widgets/currency_card.dart';
 import 'package:flutter/material.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
+
 import 'firebase_options.dart';
 
 void main() async {
@@ -10,22 +12,28 @@ void main() async {
 }
 
 void firebase() async {
+  //삽입할 데이터
   final user = <String, dynamic>{
-    "first": "Ada",
+    "first": "test 0524",
     "last": "Lovelace",
     "born": 1815,
     "timeStamp": Timestamp.now(),
   };
+
+  //firebase 초기화 코드
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
+  //firestore 가져오는 코드
   final db = FirebaseFirestore.instance;
 
+  //데이터 삽입 코드
   db.collection("flutter_test").add(user).then((DocumentReference doc) =>
       print('DocumentSnapshot added with ID: ${doc.id}'));
 
+  //데이터 출력 코드
   await db.collection("flutter_test").get().then((event) {
     for (var doc in event.docs) {
       print("test ${doc.id} => ${doc.data()}");
