@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "firesotre_test",
+            "cwd": "firesotre_test",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "firesotre_test (profile mode)",
+            "cwd": "firesotre_test",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "firesotre_test (release mode)",
+            "cwd": "firesotre_test",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_application_1",
+            "cwd": "flutter_nomad\\flutter_application_1",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_application_1 (profile mode)",
+            "cwd": "flutter_nomad\\flutter_application_1",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_application_1 (release mode)",
+            "cwd": "flutter_nomad\\flutter_application_1",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
