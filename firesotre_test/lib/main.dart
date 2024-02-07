@@ -9,6 +9,7 @@ import 'firebase_options.dart';
 
 void main() async {
   runApp(const MyApp());
+  firebase();
 }
 
 void firebase() async {
@@ -16,7 +17,7 @@ void firebase() async {
   final user = <String, dynamic>{
     "first": "test 0524",
     "last": "Lovelace",
-    "born": 1815,
+    "born": 2465,
     "timeStamp": Timestamp.now(),
   };
 
@@ -110,9 +111,9 @@ class MyApp extends StatelessWidget {
                 const SizedBox(
                   height: 25,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Button(
                       text: "Transfer",
                       bgColor: Colors.amber,
